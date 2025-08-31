@@ -7,3 +7,4 @@
 - JavaScript
 
 ## デモ
+[公開サイトはこちら](https://chisato-kikuno.github.io/omikuji/)
