@@ -66,6 +66,7 @@ button.addEventListener('click', () => {
   // おみくじ画像をフェードアウト
   resultWrapper.style.opacity = 0;
   resultWrapper.style.transition = 'opacity 1.0s ease-in';
+  images.src = resultData[omikujiResult].image;
   
   // おみくじを引いた時の効果音
   const omikujiSound = new Audio('sound/琴の滑奏.mp3');
@@ -73,9 +74,8 @@ button.addEventListener('click', () => {
   
   // ドキドキさせるために少し遅れて結果を表示
   setTimeout(() => {
-    images.src = resultData[omikujiResult].image;
     resultWrapper.style.opacity = 1;
-    resultWrapper.style.transition = 'opacity 2.3s ease-in';
+    resultWrapper.style.transition = 'opacity 1.5s ease-in';
     result.textContent = omikujiResult
     resultText.textContent = resultData[omikujiResult].text;
     result.style.display = 'block';
@@ -86,5 +86,5 @@ button.addEventListener('click', () => {
     // 一回引いたようにボタンやコメントを変更
     button.textContent = 'もう一度引く';
     omikujiText.textContent = '結果に納得するまで引くのもアリ';
-  }, 100);
+  }, 2300);
 });
