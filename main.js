@@ -65,7 +65,7 @@ button.addEventListener('click', () => {
   
   // おみくじ画像をフェードアウト
   resultWrapper.style.opacity = 0;
-  resultWrapper.style.transition = 'opacity 1.0s ease-in';
+  resultWrapper.style.transition = 'opacity 2.3s ease-in';
   
   // おみくじを引いた時の効果音
   const omikujiSound = new Audio('sound/琴の滑奏.mp3');
