@@ -70,7 +70,7 @@ button.addEventListener('click', () => {
   const omikujiResult = omikuji[index];
   
   // おみくじ画像をフェードアウト
-  resultWrapper.style.transition = 'opacity 1.5s ease-in';
+  resultWrapper.style.transition = 'opacity 1.0s ease-in';
   resultWrapper.style.opacity = 0;
     
   // おみくじを引いた時の効果音
