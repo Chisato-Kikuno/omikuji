@@ -58,6 +58,12 @@ const resultText = document.getElementById('resultText');
 const omikujiText = document.getElementById('omikujiText');
 const button = document.getElementById('button');
 
+// 画像をプリロード
+for (const cache in resultData) {
+  const img = new Image();
+  img.src = resultData[cache].image;
+}
+
 button.addEventListener('click', () => {
   // おみくじの結果を決定
   const index = Math.floor(Math.random() * omikuji.length);
