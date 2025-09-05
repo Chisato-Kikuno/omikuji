@@ -72,10 +72,8 @@ button.addEventListener('click', () => {
   omikujiSound.play();
   
   // ドキドキさせるために少し遅れて結果を表示
-  setTimeout(() => {
+  resultWrapper.addEventListener('transitioned', () => {
     images.src = resultData[omikujiResult].image;
-    resultWrapper.style.transition = 'opacity 0.1s ease-in';
-    resultWrapper.style.opacity = 1;
     result.textContent = omikujiResult
     resultText.textContent = resultData[omikujiResult].text;
     result.style.display = 'block';
@@ -86,5 +84,12 @@ button.addEventListener('click', () => {
     // 一回引いたようにボタンやコメントを変更
     button.textContent = 'もう一度引く';
     omikujiText.textContent = '結果に納得するまで引くのもアリ';
-  }, 2300);
+
+    // フェードイン
+    requestAnimationFrame(() => {
+      // レイアウト確定後に実行
+      resultWrapper.style.transition = 'opacity 0.5s ease-out';
+      resultWrapper.style.opacity = 1;
+      });
+    }, { once: true});
 });
