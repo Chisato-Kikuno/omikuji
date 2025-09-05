@@ -70,7 +70,7 @@ button.addEventListener('click', () => {
   const omikujiResult = omikuji[index];
   
   // おみくじ画像をフェードアウト
-  resultWrapper.style.transition = 'opacity 1.0s ease-in';
+  resultWrapper.style.transition = 'opacity2.3s ease-in';
   resultWrapper.style.opacity = 0;
     
   // おみくじを引いた時の効果音
@@ -94,7 +94,7 @@ button.addEventListener('click', () => {
     // フェードイン
     requestAnimationFrame(() => {
       // レイアウト確定後に実行
-      resultWrapper.style.transition = 'opacity 0.5s ease-out';
+      resultWrapper.style.transition = 'opacity 0.1s ease-out';
       resultWrapper.style.opacity = 1;
       });
     }, { once: true });
