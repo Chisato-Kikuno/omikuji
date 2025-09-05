@@ -72,7 +72,7 @@ button.addEventListener('click', () => {
   omikujiSound.play();
   
   // ドキドキさせるために少し遅れて結果を表示
-  resultWrapper.addEventListener('transitioned', () => {
+  resultWrapper.addEventListener('transitionend', () => {
     images.src = resultData[omikujiResult].image;
     result.textContent = omikujiResult
     resultText.textContent = resultData[omikujiResult].text;
