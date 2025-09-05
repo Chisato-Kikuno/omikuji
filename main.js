@@ -91,5 +91,5 @@ button.addEventListener('click', () => {
       resultWrapper.style.transition = 'opacity 0.5s ease-out';
       resultWrapper.style.opacity = 1;
       });
-    }, { once: true});
+    }, { once: true });
 });
